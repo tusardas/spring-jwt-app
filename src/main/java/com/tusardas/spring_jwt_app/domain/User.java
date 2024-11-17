@@ -9,7 +9,7 @@ public class User {
     Long id;
     String email;
     String password;
-    Long roleId;
+    String role;
     String firstName;
     String lastName;
     public Long getId() {
@@ -21,8 +21,8 @@ public class User {
     public String getPassword() {
         return password;
     }
-    public Long getRoleId() {
-        return roleId;
+    public String getRole() {
+        return role;
     }
     public String getFirstName() {
         return firstName;

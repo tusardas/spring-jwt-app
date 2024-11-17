@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ed0a1df5-0305-4cfb-bfbb-9485c640c183",
+		"name": "spring-jwt-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39146096"
+	},
+	"item": [
+		{
+			"name": "getAccessToken",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test@test.com\",\r\n    \"password\" : \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER_ROOT}}/getAccessToken",
+					"host": [
+						"{{SERVER_ROOT}}"
+					],
+					"path": [
+						"getAccessToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "about",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER_ROOT}}/about",
+					"host": [
+						"{{SERVER_ROOT}}"
+					],
+					"path": [
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJraWQiOiJjZmUzMDYxYy03NWJiLTQ4NjYtOGE2Yi1iOWVhYzU2MjVjOWYiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidXNlckBwb3N0LmNvbSIsImV4cCI6MTc2MzM2MzY0OSwidG9rZW5UeXBlIjoyLCJpYXQiOjE3MzE4Mjc2NDksInNjb3BlIjoiMSJ9.oE6NxPeSB1Cfk95unolYOEySLi8qWqtEU34eU8Tnc38dk_eR_WDeDf9z2p7ynaWMiMXJj7gycwmHxeg3pq_kOXy-ZjN5IyIuIrRa2c1yU-560Oh8odcBeDNL22rcLfs9BjHoCuRXTzVChGh-xfwSa8iRRIoAPe64u-Q2NORFVn55NSKi3RMXZbifaiy2qsWofhuC6Rwhj40irHqPLcz__opuTDRIJv9XP79Ei3YdmtNO-RnXE5ac6neBUxTeR5h1z-9WYOWy3gYXS1AmprYScpOFs7F42pqOjH4b2gNnkEknGNUr3AZW-WBGRPAoh0hO6o99dclkh1P0vBLLtTpIew",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SERVER_ROOT}}/notes",
+					"host": [
+						"{{SERVER_ROOT}}"
+					],
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

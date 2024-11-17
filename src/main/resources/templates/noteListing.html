@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Note Listing</title>
+    </head>
+    <body>
+        <h3>Note Listing</h3>
+        <ul>
+            <li th:each="note,iterStat : ${notes}">
+                <span th:text="${note.getContent()}"></span>
+            </li>
+        </ul>
+         <br>
+        <a href="/logout">Logout</a>
+    </body>
+</html>

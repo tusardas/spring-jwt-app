@@ -78,7 +78,7 @@ public class WebSecurityConfig {
         return http
         .csrf(AbstractHttpConfigurer::disable)
         .authorizeHttpRequests(
-            auth -> auth.requestMatchers("/static/**", "/templates/**" , "/loginPage").permitAll()
+            auth -> auth.requestMatchers("/static/**", "/templates/**" , "/about").permitAll()
                         .requestMatchers(HttpMethod.POST, "/getAccessToken").permitAll()
                         .anyRequest().authenticated()
         )

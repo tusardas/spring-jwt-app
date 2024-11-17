@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.tusardas.spring_jwt_app.config.pojo.LoginRequest;
 import com.tusardas.spring_jwt_app.config.utils.TokenService;
 
