@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        Welcome to Dashboard!
+        <br>
+        <table border="1">
+            <thead>
+                <th>
+                    First name
+                </th>
+                <th>
+                    Last name
+                </th>
+                <th>
+                    Email
+                </th>
+            </thead>
+            <tbody>
+                
+                <tr th:each="user,iterStat : ${users}">
+                    <td th:text="${user.getFirstName()}"></td>
+                    <td th:text="${user.getLastName()}"></td>
+                    <td th:text="${user.getEmail()}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <a href="/logout">Logout</a>
+    </body>
+</html>
